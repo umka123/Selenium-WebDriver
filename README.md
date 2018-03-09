@@ -1,1 +1,1 @@
-# Selenium-WebDriver
+# Course repository
