@@ -8,8 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.function.Function;
+import static org.openqa.selenium.support.ui.ExpectedConditions.urlToBe;
 
 public class LoginScenario {
 
@@ -30,7 +29,9 @@ public class LoginScenario {
         WebElement pw = driver.findElement(By.name("password"));
         pw.sendKeys("admin");
         driver.findElement(By.name("login")).click();
-        wait.until(vFunction)
+        /* See if login was fine */
+        wait.until(urlToBe("http://localhost/litecart/admin/"));
+        WebElement check = driver.findElement(By.id("app-"));
     }
 
     @After
