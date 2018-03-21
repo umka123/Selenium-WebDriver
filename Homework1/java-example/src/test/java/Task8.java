@@ -26,9 +26,10 @@ public class Task8 {
 
         /* Get the list of all items */
         List<WebElement> duck;
-        duck = driver.findElements(By.cssSelector("div.image-wrapper"));
+        duck = driver.findElements(By.cssSelector("li.product"));
         for (WebElement i : duck) {
-            i.findElement(By.cssSelector("div.sticker"));
+            // check if there is exactly 1 sticker for each duck
+            assert(i.findElements(By.cssSelector("div.sticker")).size() == 1);
         }
     }
 
