@@ -37,17 +37,17 @@ public class Task7 {
         /* Click on every menu item */
         List<WebElement> menu;
         List<WebElement> submenu;
-        int n = driver.findElements(By.cssSelector("li#app-")).size();
-        for (int i=0; i < n; i++) {
+        menu = driver.findElements(By.cssSelector("li#app-"));
+        for (int i=0; i < menu.size(); i++) {
             menu = driver.findElements(By.cssSelector("li#app-"));
             menu.get(i).click();
-            //wait.until(presenceOfElementLocated(By.name("h1")))
+            wait.until(presenceOfElementLocated(By.cssSelector("h1")));
             // See if a cascading menu appeard
             submenu = driver.findElements(By.cssSelector("ul.docs span.name"));
             for(int j=0; j < submenu.size(); j++){
                 submenu = driver.findElements(By.cssSelector("ul.docs span.name"));
                 submenu.get(j).click();
-                //wait
+                wait.until(presenceOfElementLocated(By.cssSelector("h1")));
             }
         }
     }
