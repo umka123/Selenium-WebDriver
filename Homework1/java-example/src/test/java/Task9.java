@@ -41,7 +41,7 @@ public class Task9 {
     public void Test1() {
         /* Start page */
         driver.get("http://localhost/litecart/admin/?app=countries&doc=countries");
-        wait.until(presenceOfElementLocated(By.cssSelector("h1")));
+        wait.until(presenceOfElementLocated(By.cssSelector("form[name=countries_form]")));
 
         /* Get the list of all countries */
         List<WebElement> country = driver.findElements(By.cssSelector("table.dataTable tr.row"));
@@ -68,12 +68,29 @@ public class Task9 {
             s = country.get(i).findElements(By.cssSelector("td")).get(5).getText();
             zones = Integer.parseInt(s);
             if (zones != 0){
-                System.out.println(country.get(i).findElements(By.cssSelector("td")).get(5).getText() + " zones!");
+                //System.out.println(country.get(i).findElements(By.cssSelector("td")).get(5).getText() + " zones!");
                 assert(isSorted(driver,wait,country.get(i)));
                 country = driver.findElements(By.cssSelector("table.dataTable tr.row"));
             }
         }
 
+    }
+
+    @Test
+    public void Test2(){
+        driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
+        wait.until(presenceOfElementLocated(By.cssSelector("form[name=geo_zones_form]")));
+        List<WebElement> country = driver.findElements(By.cssSelector("table.dataTable td:nth-child(3) a"));
+        for(int i=0; i < country.size(); i++ ){
+            country.get(i).click();
+            wait.until(presenceOfElementLocated(By.cssSelector("table#table-zones")));
+            //List<WebElement> zone = driver.findElements(By.cssSelector(""));
+
+            // get back
+            driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
+            wait.until(presenceOfElementLocated(By.cssSelector("form[name=geo_zones_form]")));
+            country = driver.findElements(By.cssSelector("table.dataTable td:nth-child(3) a"));
+        }
     }
 
     @After
@@ -87,7 +104,7 @@ public class Task9 {
         wait.until(presenceOfElementLocated(By.cssSelector("table#table-zones")));
 
         List<WebElement> zone = driver.findElements(By.cssSelector("table#table-zones tr"));
-        System.out.println(zone.size());
+        //System.out.println(zone.size());
         assert(zone.size() > 2); //the table will contain at least 2 rows: the header and the new line
         // check them
         for (int j=2; j < zone.size()-1; j++){
@@ -96,13 +113,13 @@ public class Task9 {
             if (s1.get(2).getText().compareTo(s2.get(2).getText()) >= 0){
                 //get back anyway
                 driver.findElements(By.cssSelector("li#app-")).get(2).click();
-                wait.until(urlToBe("http://localhost/litecart/admin/?app=countries&doc=countries"));
+                wait.until(presenceOfElementLocated(By.cssSelector("form[name=countries_form]")));
                 return false;
             }
         }
         //get back to the countries list
         driver.get("http://localhost/litecart/admin/?app=countries&doc=countries");
-        wait.until(urlToBe("http://localhost/litecart/admin/?app=countries&doc=countries"));
+        wait.until(presenceOfElementLocated(By.cssSelector("form[name=countries_form]")));
         return true;
     }
 }
