@@ -89,7 +89,7 @@ public class Task9 {
         for(int i=0; i < country.size(); i++ ){
             country.get(i).click();
             wait.until(presenceOfElementLocated(By.cssSelector("table#table-zones")));
-            List<WebElement> zone = driver.findElements(By.cssSelector("td:nth-child(3)"));
+            List<WebElement> zone = driver.findElements(By.cssSelector("select:not(.select2-hidden-accessible)"));
             for(int k = 2; k < zone.size(); k++){
                 String s1 = zone.get(k-1).findElement(By.cssSelector("option[selected]")).getText();
                 String s2 = zone.get(k).findElement(By.cssSelector("option[selected]")).getText();
