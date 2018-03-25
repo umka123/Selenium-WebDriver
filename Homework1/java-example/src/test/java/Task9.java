@@ -90,7 +90,7 @@ public class Task9 {
             country.get(i).click();
             wait.until(presenceOfElementLocated(By.cssSelector("table#table-zones")));
             List<WebElement> zone = driver.findElements(By.cssSelector("select:not(.select2-hidden-accessible)"));
-            for(int k = 2; k < zone.size(); k++){
+            for(int k = 1; k < zone.size(); k++){
                 String s1 = zone.get(k-1).findElement(By.cssSelector("option[selected]")).getText();
                 String s2 = zone.get(k).findElement(By.cssSelector("option[selected]")).getText();
                 //System.out.println(s1 + " vs " + s2);
@@ -109,15 +109,15 @@ public class Task9 {
         //driver = null;
     }
 
-    public static boolean isSorted (WebDriver driver, WebDriverWait wait, WebElement row){
+    private static boolean isSorted (WebDriver driver, WebDriverWait wait, WebElement row){
         row.findElement(By.cssSelector("a")).click();
         wait.until(presenceOfElementLocated(By.cssSelector("table#table-zones")));
 
-        List<WebElement> zone = driver.findElements(By.cssSelector("table#table-zones tr"));
+        List<WebElement> zone = driver.findElements(By.cssSelector("table#table-zones tr:not(.header)"));
         //System.out.println(zone.size());
-        assert(zone.size() > 2); //the table will contain at least 2 rows: the header and the new line
+        assert(zone.size() > 1); //the table will contain at least 2 rows: the header and the new line
         // check them
-        for (int j=2; j < zone.size()-1; j++){
+        for (int j=1; j < zone.size()-1; j++){
             List<WebElement> s1=zone.get(j-1).findElements(By.cssSelector("td"));
             List<WebElement> s2=zone.get(j).findElements(By.cssSelector("td"));
             if (s1.get(2).getText().compareTo(s2.get(2).getText()) >= 0){
