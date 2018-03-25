@@ -18,14 +18,16 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.urlToBe;
 */
 
 public class Task9 {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private static WebDriver driver;
+    private static WebDriverWait wait;
 
     @Before
     public void start() {
+        if(driver != null){
+            return;
+        }
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver,10);
-
         /* perform login */
         driver.get("http://localhost/litecart/admin");
         WebElement id = driver.findElement(By.name("username"));
@@ -35,6 +37,9 @@ public class Task9 {
         driver.findElement(By.name("login")).click();
         /* See if login was fine */
         wait.until(urlToBe("http://localhost/litecart/admin/"));
+
+        Runtime.getRuntime().addShutdownHook(
+                new Thread(() -> { driver.quit(); driver = null; }));
     }
 
     @Test
@@ -100,8 +105,8 @@ public class Task9 {
 
     @After
     public void stop() {
-        driver.quit();
-        driver = null;
+        //driver.quit();
+        //driver = null;
     }
 
     public static boolean isSorted (WebDriver driver, WebDriverWait wait, WebElement row){
