@@ -71,11 +71,11 @@ public class Task9 {
                 //System.out.println(country.get(i).findElements(By.cssSelector("td")).get(5).getText() + " zones!");
                 assert(isSorted(driver,wait,country.get(i)));
                 country = driver.findElements(By.cssSelector("table.dataTable tr.row"));
-            }
-        }
 
     }
 
+}
+        }
     @Test
     public void Test2(){
         driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
@@ -84,8 +84,13 @@ public class Task9 {
         for(int i=0; i < country.size(); i++ ){
             country.get(i).click();
             wait.until(presenceOfElementLocated(By.cssSelector("table#table-zones")));
-            //List<WebElement> zone = driver.findElements(By.cssSelector(""));
-
+            List<WebElement> zone = driver.findElements(By.cssSelector("td:nth-child(3)"));
+            for(int k = 2; k < zone.size(); k++){
+                String s1 = zone.get(k-1).findElement(By.cssSelector("option[selected]")).getText();
+                String s2 = zone.get(k).findElement(By.cssSelector("option[selected]")).getText();
+                //System.out.println(s1 + " vs " + s2);
+                assert(s1.compareTo(s2) < 0);
+            }
             // get back
             driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
             wait.until(presenceOfElementLocated(By.cssSelector("form[name=geo_zones_form]")));

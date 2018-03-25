@@ -30,8 +30,8 @@
       <file leaf-file-name="Task9.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/java-example/src/test/java/Task9.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+            <state relative-caret-position="413">
+              <caret line="112" column="42" lean-forward="true" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -367,9 +367,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="379" />
-    <option name="y" value="86" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="403" />
+    <option name="y" value="54" />
     <option name="width" value="1322" />
     <option name="height" value="865" />
   </component>
@@ -390,6 +390,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -433,8 +435,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -676,39 +676,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Task9 - 2018.03.23 at 21h 49m 52s.xml">
-      <configuration name="Task9" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task9 - 2018.03.23 at 22h 04m 19s.xml">
-      <configuration name="Task9" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task9 - 2018.03.23 at 22h 25m 11s.xml">
-      <configuration name="Task9" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task9 - 2018.03.23 at 22h 26m 44s.xml">
-      <configuration name="Task9" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task9 - 2018.03.23 at 22h 30m 07s.xml">
-      <configuration name="Task9" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task9 - 2018.03.23 at 22h 31m 48s.xml">
-      <configuration name="Task9" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task9 - 2018.03.23 at 22h 34m 54s.xml">
-      <configuration name="Task9" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task9 - 2018.03.24 at 08h 41m 18s.xml">
-      <configuration name="Task9" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Task9 - 2018.03.24 at 09h 05m 41s.xml">
       <configuration name="Task9" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Task9 - 2018.03.24 at 09h 08m 37s.xml">
       <configuration name="Task9" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Task9 - 2018.03.25 at 16h 15m 25s.xml">
+      <configuration name="Task9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task9 - 2018.03.25 at 16h 39m 23s.xml">
+      <configuration name="Task9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task9 - 2018.03.25 at 17h 14m 45s.xml">
+      <configuration name="Task9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task9 - 2018.03.25 at 17h 20m 57s.xml">
+      <configuration name="Task9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task9 - 2018.03.25 at 17h 25m 46s.xml">
+      <configuration name="Task9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task9 - 2018.03.25 at 17h 30m 32s.xml">
+      <configuration name="Task9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task9 - 2018.03.25 at 17h 35m 01s.xml">
+      <configuration name="Task9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task9 - 2018.03.25 at 17h 36m 57s.xml">
+      <configuration name="Task9" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="379" y="86" width="1322" height="865" extended-state="0" />
+    <frame x="-4" y="-4" width="1928" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -720,11 +720,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40519482" sideWeight="0.5030441" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19480519" sideWeight="0.49695587" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4041451" sideWeight="0.49695587" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26407915" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18072917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -751,6 +751,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/java-example/src/test/java/Task9.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/java-example/src/test/java/Task8.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1049,7 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,8 +1074,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java-example/src/test/java/Task9.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+        <state relative-caret-position="413">
+          <caret line="112" column="42" lean-forward="true" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
