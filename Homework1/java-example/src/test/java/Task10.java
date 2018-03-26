@@ -75,6 +75,11 @@ public class Task10 {
         newPriceColor = newPrice.getCssValue("color");
         assert (isRed(newPriceColor));
 
+        oldPriceStyle = oldPrice.getCssValue("text-decoration");
+        assert(oldPriceStyle.substring(0,12).compareTo("line-through") == 0);
+        newPriceStyle = newPrice.getCssValue("font-weight");
+        assert(Integer.valueOf(newPriceStyle) >= 700);
+
     }
 
     @After
