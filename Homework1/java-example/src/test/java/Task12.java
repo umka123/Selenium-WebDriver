@@ -43,7 +43,7 @@ public class Task12 {
         wait.until(presenceOfElementLocated(By.cssSelector("div.tabs")));
         /*** General ***/
         driver.findElement(By.name("status")).click();
-        String name = genRandom(5, "ABCDEFGHIJKLMNOPQRSTUVWXYZ") + " Duck";
+        String name = "Black Duck";
         driver.findElement(By.name("name[en]")).sendKeys(name);
         driver.findElement(By.name("code")).sendKeys("rd999");
         // pick all categories
@@ -101,14 +101,5 @@ public class Task12 {
     public void stop() {
         driver.quit();
         driver = null;
-    }
-
-    private String genRandom(int len, String letters){
-        StringBuffer gen = new StringBuffer();
-        for(int i=0; i < len; i++){
-            int rand = (int) (Math.random()*letters.length());
-            gen.append(letters.charAt(rand));
-        }
-        return gen.toString();
     }
 }

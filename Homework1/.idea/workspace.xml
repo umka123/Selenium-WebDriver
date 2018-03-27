@@ -42,8 +42,8 @@
       <file leaf-file-name="Task12.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/java-example/src/test/java/Task12.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="96" column="20" lean-forward="false" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+            <state relative-caret-position="948">
+              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -686,9 +686,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Task12 - 2018.03.27 at 10h 14m 16s.xml">
-      <configuration name="Task12" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Task12 - 2018.03.27 at 14h 46m 44s.xml">
       <configuration name="Task12" configurationId="JUnit" />
     </history-entry>
@@ -714,6 +711,9 @@
       <configuration name="Task12" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Task12 - 2018.03.27 at 16h 15m 32s.xml">
+      <configuration name="Task12" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task12 - 2018.03.27 at 16h 17m 44s.xml">
       <configuration name="Task12" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1126,8 +1126,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java-example/src/test/java/Task12.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="96" column="20" lean-forward="false" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+        <state relative-caret-position="948">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
