@@ -30,8 +30,8 @@
       <file leaf-file-name="Task11.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java-example/src/test/java/Task11.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+            <state relative-caret-position="457">
+              <caret line="85" column="3" lean-forward="false" selection-start-line="85" selection-start-column="3" selection-end-line="92" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,8 +42,8 @@
       <file leaf-file-name="Task12.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/java-example/src/test/java/Task12.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="649">
-              <caret line="55" column="52" lean-forward="false" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
+            <state relative-caret-position="313">
+              <caret line="96" column="20" lean-forward="false" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -686,24 +686,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Task11 - 2018.03.26 at 11h 13m 01s.xml">
-      <configuration name="Task11" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task11 - 2018.03.26 at 11h 26m 21s.xml">
-      <configuration name="Task11" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task12 - 2018.03.27 at 09h 49m 51s.xml">
-      <configuration name="Task12" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task12 - 2018.03.27 at 09h 50m 45s.xml">
-      <configuration name="Task12" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task12 - 2018.03.27 at 09h 51m 59s.xml">
-      <configuration name="Task12" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task12 - 2018.03.27 at 09h 52m 59s.xml">
-      <configuration name="Task12" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Task12 - 2018.03.27 at 10h 14m 16s.xml">
       <configuration name="Task12" configurationId="JUnit" />
     </history-entry>
@@ -714,6 +696,24 @@
       <configuration name="Task12" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Task12 - 2018.03.27 at 14h 48m 39s.xml">
+      <configuration name="Task12" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task12 - 2018.03.27 at 15h 03m 13s.xml">
+      <configuration name="Task12" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task12 - 2018.03.27 at 15h 33m 04s.xml">
+      <configuration name="Task12" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task12 - 2018.03.27 at 15h 38m 57s.xml">
+      <configuration name="Task12" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task12 - 2018.03.27 at 15h 51m 36s.xml">
+      <configuration name="Task12" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task12 - 2018.03.27 at 16h 12m 14s.xml">
+      <configuration name="Task12" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task12 - 2018.03.27 at 16h 15m 32s.xml">
       <configuration name="Task12" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -729,7 +729,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40519482" sideWeight="0.5030441" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22901554" sideWeight="0.49695587" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.534715" sideWeight="0.49695587" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1116,8 +1116,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java-example/src/test/java/Task11.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+        <state relative-caret-position="457">
+          <caret line="85" column="3" lean-forward="false" selection-start-line="85" selection-start-column="3" selection-end-line="92" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1126,8 +1126,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java-example/src/test/java/Task12.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="55" column="52" lean-forward="false" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
+        <state relative-caret-position="313">
+          <caret line="96" column="20" lean-forward="false" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
