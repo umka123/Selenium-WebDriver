@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
@@ -50,9 +51,13 @@ public class Task17 {
         for(String s: products){
             driver.findElement(By.linkText(s)).click();
             wait.until(presenceOfElementLocated(By.cssSelector("form[method=post] div.tabs")));
+
+            assert(driver.manage().logs().get("browser").getAll().size() == 0);
+
             driver.get("http://localhost/litecart/admin/?app=catalog&doc=catalog&category_id=1");
             wait.until(presenceOfElementLocated(By.cssSelector("table.dataTable")));
         }
+
     }
 
     @After
