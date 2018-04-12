@@ -29,7 +29,7 @@ public class CartTest {
     @Test
     public void Test1() {
         driver.get("http://localhost/litecart");
-        Integer n=3; // amount of products to add
+        Integer n = 3; // amount of products to add
         Integer p = Integer.parseInt(driver.findElement(By.cssSelector("span.quantity")).getText()); // amount of products in the cart
 
         /* Add products to the cart */
@@ -51,10 +51,12 @@ public class CartTest {
 
         driver.findElement(By.linkText("Checkout »")).click();
         wait.until(presenceOfElementLocated(By.cssSelector("div#box-checkout-summary")));
-        while (driver.findElements(By.cssSelector("table.dataTable tr")).size() > 0){
+        while (driver.findElements(By.cssSelector("table.dataTable td.item")).size() > 0){
             WebElement table = driver.findElement(By.cssSelector("table.dataTable"));
+            int i = driver.findElements(By.cssSelector("table.dataTable td.item")).size();
             driver.findElement(By.name("remove_cart_item")).click();
             wait.until(stalenessOf(table));
+            assert(i-driver.findElements(By.cssSelector("table.dataTable td.item")).size() == 1);
         }
     }
 
