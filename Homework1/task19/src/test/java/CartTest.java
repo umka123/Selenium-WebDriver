@@ -72,8 +72,9 @@ public class CartTest {
     }
 
     private void Checkout(){
-        driver.findElement(By.linkText("Checkout »")).click();
-        wait.until(presenceOfElementLocated(By.cssSelector("div#box-checkout-summary")));
+        WebElement check = driver.findElement(By.partialLinkText("Checkout"));
+        check.click();
+        wait.until(stalenessOf(check));
     }
 
     private void removeAllProducts(){
