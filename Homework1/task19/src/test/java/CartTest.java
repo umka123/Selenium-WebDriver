@@ -23,13 +23,34 @@ public class CartTest {
     public void start() {
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver,10);
+        driver.get("http://localhost/litecart");
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @Test
     public void Test1() {
+        //loadMainPage();
+
+        addProducts(3);
+
+        Checkout();
+
+        removeAllProducts();
+    }
+
+    @After
+    public void stop() {
+        driver.quit();
+        driver = null;
+    }
+/*
+    private void loadMainPage(){
+        driver = new ChromeDriver();
+        wait = new WebDriverWait(driver,10);
         driver.get("http://localhost/litecart");
-        Integer n = 3; // amount of products to add
+    }
+*/
+    private void addProducts(int n){
         Integer p = Integer.parseInt(driver.findElement(By.cssSelector("span.quantity")).getText()); // amount of products in the cart
 
         /* Add products to the cart */
@@ -48,9 +69,14 @@ public class CartTest {
             driver.findElement(By.cssSelector("div#logotype-wrapper")).click();
             wait.until(stalenessOf(title));
         }
+    }
 
+    private void Checkout(){
         driver.findElement(By.linkText("Checkout »")).click();
         wait.until(presenceOfElementLocated(By.cssSelector("div#box-checkout-summary")));
+    }
+
+    private void removeAllProducts(){
         while (driver.findElements(By.cssSelector("table.dataTable td.item")).size() > 0){
             WebElement table = driver.findElement(By.cssSelector("table.dataTable"));
             int oldItems = driver.findElements(By.cssSelector("table.dataTable td.item")).size();
@@ -58,11 +84,5 @@ public class CartTest {
             wait.until(stalenessOf(table));
             assert(driver.findElements(By.cssSelector("table.dataTable td.item")).size() == oldItems - 1);
         }
-    }
-
-    @After
-    public void stop() {
-        driver.quit();
-        driver = null;
     }
 }
