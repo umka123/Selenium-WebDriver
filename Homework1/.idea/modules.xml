@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-example.iml" filepath="$PROJECT_DIR$/.idea/modules/java-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-example_main.iml" filepath="$PROJECT_DIR$/.idea/modules/java-example_main.iml" group="java-example" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-example_test.iml" filepath="$PROJECT_DIR$/.idea/modules/java-example_test.iml" group="java-example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task19.iml" filepath="$PROJECT_DIR$/.idea/modules/task19.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task19_main.iml" filepath="$PROJECT_DIR$/.idea/modules/task19_main.iml" group="task19" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task19_test.iml" filepath="$PROJECT_DIR$/.idea/modules/task19_test.iml" group="task19" />
     </modules>
   </component>
 </project>
