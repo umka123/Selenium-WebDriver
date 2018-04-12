@@ -53,10 +53,10 @@ public class CartTest {
         wait.until(presenceOfElementLocated(By.cssSelector("div#box-checkout-summary")));
         while (driver.findElements(By.cssSelector("table.dataTable td.item")).size() > 0){
             WebElement table = driver.findElement(By.cssSelector("table.dataTable"));
-            int i = driver.findElements(By.cssSelector("table.dataTable td.item")).size();
+            int oldItems = driver.findElements(By.cssSelector("table.dataTable td.item")).size();
             driver.findElement(By.name("remove_cart_item")).click();
             wait.until(stalenessOf(table));
-            assert(i-driver.findElements(By.cssSelector("table.dataTable td.item")).size() == 1);
+            assert(driver.findElements(By.cssSelector("table.dataTable td.item")).size() == oldItems - 1);
         }
     }
 
