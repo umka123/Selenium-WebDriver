@@ -25,9 +25,6 @@ public class CartTest extends TestBase{
     @Test
     @UseDataProvider(value = "validProducts", location = DataProviders.class)
     public void addRemove(Products products) {
-
-        loadMainPage();
-
         addProducts(products);
 
         Checkout();
@@ -41,25 +38,27 @@ public class CartTest extends TestBase{
     }
 
     private void addProducts(Products products){
-        Integer p = Integer.parseInt(driver.findElement(By.cssSelector("span.quantity")).getText()); // amount of products in the cart
-
         /* Add products to the cart */
         for (Integer i = 0; i < products.size(); i++ ){
-            driver.findElement(By.cssSelector("li.product")).click();
-            wait.until(presenceOfElementLocated(By.cssSelector("h1.title")));
-            WebElement title = driver.findElement(By.cssSelector("h1.title"));
-
-            if(driver.findElements(By.cssSelector("select")).size()!=0){
-                Select sizeSelect = new Select(driver.findElement(By.cssSelector("select")));
-                sizeSelect.selectByIndex(products.getProductSize(i));
-            }
-            /* add to cart */
-            driver.findElement(By.name("add_cart_product")).click();
-            p++; //the amount of products increased
-            wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("span.quantity"), p.toString()));
-            driver.findElement(By.cssSelector("div#logotype-wrapper")).click();
-            wait.until(stalenessOf(title));
+            addOneProduct(products,i);
         }
+    }
+
+    private void addOneProduct(Products products, int index){
+        loadMainPage();
+        Integer p = Integer.parseInt(driver.findElement(By.cssSelector("span.quantity")).getText()); // amount of products in the cart
+
+        driver.findElement(By.cssSelector("li.product")).click();
+        wait.until(presenceOfElementLocated(By.cssSelector("h1.title")));
+
+        if(driver.findElements(By.cssSelector("select")).size()!=0){
+            Select sizeSelect = new Select(driver.findElement(By.cssSelector("select")));
+            sizeSelect.selectByIndex(products.getProductSize(index));
+        }
+        /* add to cart */
+        driver.findElement(By.name("add_cart_product")).click();
+        p++; //the amount of products increased
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("span.quantity"), p.toString()));
     }
 
     private void Checkout(){
