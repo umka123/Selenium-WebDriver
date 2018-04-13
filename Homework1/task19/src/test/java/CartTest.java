@@ -1,3 +1,4 @@
+import com.tngtech.java.junit.dataprovider.UseDataProvider;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,58 +10,47 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 import static org.openqa.selenium.support.ui.ExpectedConditions.stalenessOf;
 
-public class CartTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-
-    @Before
-    public void start() {
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver,10);
-        driver.get("http://localhost/litecart");
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
+public class CartTest extends TestBase{
+    //List<Product> products = new ArrayList<>();
 
     @Test
-    public void Test1() {
-        //loadMainPage();
+    //@UseDataProvider(value = "validProducts", location = DataProviders.class)
+    public void AddRemove() {
+        Products products = Products.newEntity().withAmount(3).build();
 
-        addProducts(3);
+        loadMainPage();
+
+        addProducts(products);
 
         Checkout();
 
         removeAllProducts();
     }
 
-    @After
-    public void stop() {
-        driver.quit();
-        driver = null;
-    }
-/*
+
     private void loadMainPage(){
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver,10);
         driver.get("http://localhost/litecart");
     }
-*/
-    private void addProducts(int n){
+
+    private void addProducts(Products products){
         Integer p = Integer.parseInt(driver.findElement(By.cssSelector("span.quantity")).getText()); // amount of products in the cart
 
         /* Add products to the cart */
-        for (Integer i = 0; i < n; i++ ){
+        for (Integer i = 0; i < products.size(); i++ ){
             driver.findElement(By.cssSelector("li.product")).click();
             wait.until(presenceOfElementLocated(By.cssSelector("h1.title")));
             WebElement title = driver.findElement(By.cssSelector("h1.title"));
+
             if(driver.findElements(By.cssSelector("select")).size()!=0){
-                Select size = new Select(driver.findElement(By.cssSelector("select")));
-                size.selectByIndex(1);
+                Select sizeSelect = new Select(driver.findElement(By.cssSelector("select")));
+                sizeSelect.selectByIndex(products.getProductSize(i));
             }
             /* add to cart */
             driver.findElement(By.name("add_cart_product")).click();
