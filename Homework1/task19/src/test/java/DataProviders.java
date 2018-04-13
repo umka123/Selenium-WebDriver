@@ -8,7 +8,7 @@ public class DataProviders {
     public static Object[][] validProducts() {
         return new Object[][] {
                 { Products.newEntity()
-                        .withAmount((int) (Math.random()*3 + 1)) },
+                        .withAmount(3).build() },
                 /* ... */
         };
     }
