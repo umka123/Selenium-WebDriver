@@ -38,7 +38,10 @@ public class Application {
     public void removeAllProducts(){
         cartPage.open();
         while (!cartPage.isEmpty()){
+            int before = cartPage.itemsQuantity();
             cartPage.removeItem();
+            int after = cartPage.itemsQuantity();
+            assert (after == before - 1);
         }
     }
 
