@@ -25,55 +25,11 @@ public class CartTest extends TestBase{
     @Test
     @UseDataProvider(value = "validProducts", location = DataProviders.class)
     public void addRemove(Products products) {
-        addProducts(products);
+        app.addProducts(products);
 
-        Checkout();
+        app.Checkout();
 
-        removeAllProducts();
+        app.removeAllProducts();
     }
 
-
-    private void loadMainPage(){
-        driver.get("http://localhost/litecart");
-    }
-
-    private void addProducts(Products products){
-        /* Add products to the cart */
-        for (Integer i = 0; i < products.size(); i++ ){
-            addOneProduct(products,i);
-        }
-    }
-
-    private void addOneProduct(Products products, int index){
-        loadMainPage();
-        Integer p = Integer.parseInt(driver.findElement(By.cssSelector("span.quantity")).getText()); // amount of products in the cart
-
-        driver.findElement(By.cssSelector("li.product")).click();
-        wait.until(presenceOfElementLocated(By.cssSelector("h1.title")));
-
-        if(driver.findElements(By.cssSelector("select")).size()!=0){
-            Select sizeSelect = new Select(driver.findElement(By.cssSelector("select")));
-            sizeSelect.selectByIndex(products.getProductSize(index));
-        }
-        /* add to cart */
-        driver.findElement(By.name("add_cart_product")).click();
-        p++; //the amount of products increased
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("span.quantity"), p.toString()));
-    }
-
-    private void Checkout(){
-        WebElement check = driver.findElement(By.partialLinkText("Checkout"));
-        check.click();
-        wait.until(stalenessOf(check));
-    }
-
-    private void removeAllProducts(){
-        while (driver.findElements(By.cssSelector("table.dataTable td.item")).size() > 0){
-            WebElement table = driver.findElement(By.cssSelector("table.dataTable"));
-            int oldItems = driver.findElements(By.cssSelector("table.dataTable td.item")).size();
-            driver.findElement(By.name("remove_cart_item")).click();
-            wait.until(stalenessOf(table));
-            assert(driver.findElements(By.cssSelector("table.dataTable td.item")).size() == oldItems - 1);
-        }
-    }
 }
