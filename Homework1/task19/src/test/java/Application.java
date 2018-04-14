@@ -29,10 +29,8 @@ public class Application {
     }
 
     public void addOneProduct(){
-        mainPage.open();
-        mainPage.pickProduct();
-        productPage.pickSize((int)(Math.random()*3+1));
-        productPage.addToCart();
+        mainPage.open().pickProduct();
+        productPage.pickSize((int)(Math.random()*3+1)).addToCart();
     }
 
     public void removeAllProducts(){
