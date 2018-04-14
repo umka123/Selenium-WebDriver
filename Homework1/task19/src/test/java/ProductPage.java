@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 import static org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElementLocated;
 
 public class ProductPage extends Page {
@@ -14,21 +16,21 @@ public class ProductPage extends Page {
     }
 
     @FindBy(name = "add_cart_product")
-    public WebElement addButton;
+    private WebElement addButton;
 
     @FindBy(css = "span.quantity")
-    public WebElement quantity;
+    private WebElement quantity;
 
     @FindBy(name = "options[Size]")
-    public WebElement selectSize;
+    private List<WebElement> selectSize;
 
-    public boolean hasSizes() {
-        return driver.findElements(By.name("options[Size]")).size()>0;
+    private boolean hasSizes() {
+        return selectSize.size()>0;
     }
 
     public ProductPage pickSize(int i) {
         if(this.hasSizes()) {
-            Select sizeSelect = new Select(selectSize);
+            Select sizeSelect = new Select(selectSize.get(0));
             sizeSelect.selectByIndex(i);
         }
         return this;

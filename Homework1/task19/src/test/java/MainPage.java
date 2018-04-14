@@ -13,7 +13,7 @@ public class MainPage extends Page {
     }
 
     @FindBy(className = "product")
-    public WebElement firstProduct;
+    private WebElement firstProduct;
 
     public MainPage open() {
         driver.get("http://localhost/litecart");
