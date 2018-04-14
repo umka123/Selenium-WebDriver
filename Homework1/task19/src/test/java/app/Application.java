@@ -1,6 +1,11 @@
+package app;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.CartPage;
+import pages.MainPage;
+import pages.ProductPage;
 
 public class Application {
     private WebDriver driver;

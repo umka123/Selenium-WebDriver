@@ -1,6 +1,8 @@
+package tests;
+
 import org.junit.Test;
 
-public class CartTest extends TestBase{
+public class CartTest extends TestBase {
 
     @Test
     public void addRemove() {
